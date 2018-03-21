@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>NovaRocketTeam</title>
+		<link rel="stylesheet" type="text/css" href="mystyle.css">
+	</head>
+	<body>
+		<nav>
+			<ul class="nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#rockets">Rockets</a></li>
+                <li><a href="#teams">Teams</a></li>
+                <li><a href="#aboutus">About Us</a></li>
+                <li><a href="#sponsors">Sponsors</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <header>
+        	<img src="../img/rocket_logo2.jpg">
+        	<h1>Nova Rocket Team</h1>
+        	<p><a href="#contact">Join Us</a></p>
+        </header>
+
+        <div class="content">
+        	<div class="news padding64 center" id="news">
+        		<h1>News</h1>
+        	</div>
+        	<div class="Rockets black padding64 center" id="rockets">
+        		<h1>Rockets</h1>
+        	</div>
+        	<div class="Teams padding64 center" id="teams">
+        		<h1>Teams</h1>
+        		<p>Control Team</p>
+        		<p>Electronics</p>
+        		<p>Rocket and recovery system</p>
+        		<p>Rocket propulsion</p>
+        	</div>
+        	<div class="AboutUs black padding64 center" id="aboutus">
+	        	<h1>About Us</h1>
+	        	<p>
+	        		This project was born in Faculdade de Ciências e Tecnologia of NOVA University of Lisbon last year with the will to learn new concepts, explore the unknown and test our limits. The project's team dedicates not just to learning how to design, assemble, and launch rockets, but also to improve its efficiency from paper electronics for weight reduction to rocket motor designs.
+				</p>
+				<p>
+					Even tought model rocketry is a very popular hobby in other countries in Portugal there is a very small culture. So we also aim to educate and inspire the next generation of engeneers.
+
+	        </div>
+	        <div class="Sponsors padding64 center" id="sponsors">
+        		<h1>Sponsors</h1>
+        	</div>
+        	<div class="black padding64 center" id="contact">
+	        	<h1>Contact</h1>
+	        	<p>Palha</p>
+	    	</di1v>
+	    </div>
+
+
+        <div id="googleMap" style="width:100%;height:400px;filter: grayscale(100%)"></div>
+        <script>
+			function myMap() {
+  				myCenter=new google.maps.LatLng(38.661184,-9.203917);
+				var mapOptions= {
+					center:myCenter,
+					zoom:12, scrollwheel: false, draggable: false,
+					mapTypeId:google.maps.MapTypeId.ROADMAP
+				};
+				var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+				var marker = new google.maps.Marker({
+					position: myCenter,
+				});
+				marker.setMap(map);
+			}
+		</script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVkUEfPiM1Wr_fQdiz1m92GbklzmpcMBM&callback=myMap"></script>
+		<footer>
+			<div class="black padding64">
+			</div>
+		</footer>
+	</body>
+
+</html>
