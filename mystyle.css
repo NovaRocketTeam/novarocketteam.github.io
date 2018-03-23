@@ -1,66 +1,25 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
 
-
-/*cool red color: #e81c4f; */
-
-/*########BODY##########*/
-
 body {
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-
 }
 
-/*########NAV###########*/
-
-.nav {
-    text-align: center;
-    width: 100%;
-    list-style-type: none;
-    margin: 0 auto;
-    padding: 10px 10px 10px 10px;
-    overflow: hidden;
-    background-color: #333;
-    position: fixed;
-    top: 0;
-}
-
-.nav li{
-    display:inline;
-}
-
-.nav a {
-    font-family:Arial,sans-serif;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-   display: inline-block;
-}
-
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-    background-color: #111;
-}
-.active {
-    background-color: #4CAF50;
-}
-/*########HEADER###########*/
 header {
   background-color: #263d36;
-  background-image: url("../img/spacex-101796-unsplash.jpg");
+  background-image: url("img/spacex-101796-unsplash.jpg");
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
   line-height: 1.2;
-  padding: 10vw 2em;
+  padding: 6vw 2em;
   text-align: center;
 }
 
 header img {
   display: inline-block;
-  height: 120px;
+  height: 100px;
   vertical-align: top;
-  width: 120px;
+  width: 100px;
 }
 
 header h1 {
@@ -88,27 +47,45 @@ header a:hover {
   color: white;
 }
 
-/*#######CONTENT#########*/
 
+body {margin: 0;}
 
-h1 {
-  margin-top: 1em;
-  text-align: center;
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    width: 100%;
 }
-.content p {
-  text-align: justify;
-  text-justify: inter-word;
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family:Arial,sans-serif;
 }
-h1,
-h2,
-strong {
-  color: #333;
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #4CAF50;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px){
+    ul.topnav li.right, 
+    ul.topnav li {float: none;}
 }
 
 .content{
-  margin: 0 auto;
+  width: 100%;
   line-height: 1.5;
-  padding: 4em 1em;
+  padding: 0em 0em;
   color: #555;
 }
 
@@ -130,4 +107,5 @@ strong {
 .black h1{
   color: white !important;
 }
+
 

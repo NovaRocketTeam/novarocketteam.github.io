@@ -1,28 +1,62 @@
 <!DOCTYPE html>
 <html>
+
+	<script 
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+	</script>
+
+	<script>
+		$(document).ready(function(){
+		  // Add smooth scrolling to all links
+		  $("a").on('click', function(event) {
+
+		    // Make sure this.hash has a value before overriding default behavior
+		    if (this.hash !== "") {
+		      // Prevent default anchor click behavior
+		      event.preventDefault();
+
+		      // Store hash
+		      var hash = this.hash;
+
+		      // Using jQuery's animate() method to add smooth page scroll
+		      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+		      $('html, body').animate({
+		        scrollTop: $(hash).offset().top
+		      }, 800, function(){
+		   
+		        // Add hash (#) to URL when done scrolling (default click behavior)
+		        window.location.hash = hash;
+		      });
+		    } 
+		  });
+		});
+	</script>
+
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="img/rocket_logo2.jpg">
 		<title>NovaRocketTeam</title>
 		<link rel="stylesheet" type="text/css" href="mystyle.css">
-	</head>
-	<body>
-		<nav>
-			<ul class="nav">
-				<li><a href="#">Home</a></li>
-				<li><a href="#news">News</a></li>
-				<li><a href="#rockets">Rockets</a></li>
-				<li><a href="#teams">Teams</a></li>
-				<li><a href="#aboutus">About Us</a></li>
-				<li><a href="#sponsors">Sponsors</a></li>
-				<li><a href="#contact">Contact</a></li>
-           		</ul>
-        </nav>
-        <header>
-        	<img src="img/rocket_logo2.jpg">
-        	<h1>Nova Rocket Team</h1>
-        	<p><a href="#contact">Join Us</a></p>
-        </header>
+	</head>	
 
-        <div class="content">
+	<body>
+
+		<ul class="topnav">
+			<li><a href="#home">Home</a></li>
+			<li><a href="#news">News</a></li>
+			<li><a href="#rockets">Rockets</a></li>
+			<li><a href="#teams">Teams</a></li>
+			<li><a href="#aboutus">About Us</a></li>
+			<li><a href="#sponsors">Sponsors</a></li>
+			<li><a href="#contact">Contact</a></li>
+		</ul>
+
+	    <header id="home">
+	        	<img src="img/rocket_logo2.jpg">
+	        	<h1>Nova Rocket Team</h1>
+	    </header>
+
+		<div class="content">
         	<div class="news padding64 center" id="news">
         		<h1>News</h1>
         	</div>
@@ -51,32 +85,38 @@
         	<div class="black padding64 center" id="contact">
 	        	<h1>Contact</h1>
 	        	<p>Palha</p>
-	    	</di1v>
-	    </div>
+	    	</div>
 
 
-        <div id="googleMap" style="width:100%;height:400px;filter: grayscale(100%)"></div>
-        <script>
-			function myMap() {
-  				myCenter=new google.maps.LatLng(38.661184,-9.203917);
-				var mapOptions= {
-					center:myCenter,
-					zoom:12, scrollwheel: false, draggable: false,
-					mapTypeId:google.maps.MapTypeId.ROADMAP
-				};
-				var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+			<div id="map" style="width:100%;height:300px;filter: grayscale(100%)"></div>
 
-				var marker = new google.maps.Marker({
-					position: myCenter,
-				});
-				marker.setMap(map);
-			}
-		</script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVkUEfPiM1Wr_fQdiz1m92GbklzmpcMBM&callback=myMap"></script>
-		<footer>
-			<div class="black padding64">
-			</div>
-		</footer>
+		    <script>
+		    	function initMap() {
+			        var myLatLng = {lat: 38.661184, lng: -9.203917};
+
+			        var map = new google.maps.Map(document.getElementById('map'), {
+			          zoom: 16,
+			          center: myLatLng,
+			          gestureHandling: 'cooperative'
+			        });
+
+			        var marker = new google.maps.Marker({
+			          position: myLatLng,
+			          map: map,
+			          title: 'map'
+			        });
+			      }
+		    </script>
+
+		    <script async defer
+		    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVkUEfPiM1Wr_fQdiz1m92GbklzmpcMBM&callback=initMap">
+		    </script> 
+
+			
+			<footer>
+				<div class="black padding64">
+				</div>
+			</footer>
+		</div>
 	</body>
-
 </html>
