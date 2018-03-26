@@ -34,26 +34,6 @@ header h2 {
   font-weight: 600;
 }
 
-header a {
-  border: 2px solid #4CAF50;
-  border-radius: 290486px;
-  color: white;
-  font-size: 1em;
-  letter-spacing: 0.2em;
-  padding: 1em 2em;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: none 200ms ease-out;
-  transition-property: color, background;
-}
-
-header a:hover {
-  background:  #4CAF50;
-  color: white;
-}
-
-
 body {margin: 0;}
 
 
@@ -90,6 +70,27 @@ ul.topnav li.right {float: right;}
     ul.topnav li.right, 
     ul.topnav li {float: none;}
 }
+
+
+ul.topnav li a.join{
+  border: 2px solid #4CAF50;
+  border-radius: 290486px;
+  color: white;
+  font-size: 1em;
+  letter-spacing: 0.2em;
+  padding: 0.7em 2em;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: none 200ms ease-out;
+  transition-property: color, background;
+}
+
+ul.topnav li a.join:hover {
+  background:  #4CAF50;
+  color: white;
+}
+
 
 /* General */ 
 
