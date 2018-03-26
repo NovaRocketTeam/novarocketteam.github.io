@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+	<script 
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+	</script>
+	<script>
+		$(document).ready(function(){
+		  // Add smooth scrolling to all links
+		  $("a").on('click', function(event) {
+
+		    // Make sure this.hash has a value before overriding default behavior
+		    if (this.hash !== "") {
+		      // Prevent default anchor click behavior
+		      event.preventDefault();
+
+		      // Store hash
+		      var hash = this.hash;
+
+		      // Using jQuery's animate() method to add smooth page scroll
+		      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+		      $('html, body').animate({
+		        scrollTop: $(hash).offset().top
+		      }, 800, function(){
+		   
+		        // Add hash (#) to URL when done scrolling (default click behavior)
+		        window.location.hash = hash;
+		      });
+		    } 
+		  });
+		});
+	</script>
+
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="img/logo.png">
+		<title>NovaRocketTeam</title>
+		<link rel="stylesheet" type="text/css" href="mystyle.css">
+	</head>	
+
+	<body>
+
+		<ul class="topnav">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="index.html#news">News</a></li>
+			<li><a href="index.html#rockets">Rockets</a></li>
+			<li><a href="teams.html">Members</a></li>
+			<li><a href="index.html#aboutus">About Us</a></li>
+			<li><a href="sponsors.html">Sponsors</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+
+	    <header id="home">
+	        	<img src="img/logo.svg">
+	        	<h1>Nova Rocket Team</h1>
+	        	<h2>Discovering the Unknown</h2>
+	    </header>
+
+		<div class="content">
+          	<div class="black padding64 center" id="contact">
+	        	<h1>Contacts</h1>
+	        	<p>
+	        	Send us an e-mail:
+	        	</p>
+	        	<p>
+	        	<a href="mailto:novarocketteam@gmail.com" target="_top">novarocketteam@gmail.com</a>
+				</p>
+
+				<p>
+					Or send us a message through the form below:
+				</p>
+
+				<div class="container">
+				  <form action="/action_page.php">
+				    <label for="fname">First Name</label>
+				    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+				    <label for="lname">Last Name</label>
+				    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+				    <label for="country">Country</label>
+				    <select id="country" name="country">
+				      <option value="australia">Portugal</option>
+				      <option value="canada">Spain</option>
+				      <option value="usa">France</option>
+				      <option value="usa">United Kingdom</option>
+				      <option value="usa">Europe</option>
+				      <option value="usa">USA</option>
+				      <option value="usa">Canada</option>
+				      <option value="usa">South America</option>
+				      <option value="usa">Asia</option>
+				      <option value="usa">Russia</option>
+				      <option value="usa">Africa</option>
+				      <option value="usa">Australia</option>
+				      <option value="usa">Antarctica</option>
+				      <option value="usa">North pole</option>
+
+				    </select>
+
+				    <label for="subject">Subject</label>
+				    <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+
+				    <input type="submit" value="Submit">
+				  </form>
+				</div>
+			</div>
+			
+
+			<div class="black padding12 center">			
+				<h1>Where to find us</h1>
+			</div>		
+
+			<div id="map" style="width:100%;height:300px;filter: grayscale(100%)"></div>
+
+		    <script>
+		    	function initMap() {
+			        var myLatLng = {lat: 38.661184, lng: -9.203917};
+
+			        var map = new google.maps.Map(document.getElementById('map'), {
+			          zoom: 16,
+			          center: myLatLng,
+			          gestureHandling: 'cooperative'
+			        });
+
+			        var marker = new google.maps.Marker({
+			          position: myLatLng,
+			          map: map,
+			          title: 'map'
+			        });
+			      }
+		    </script>
+
+		    <script async defer
+		    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVkUEfPiM1Wr_fQdiz1m92GbklzmpcMBM&callback=initMap">
+		    </script> 
+
+			
+			<footer>
+				<div class="black padding64">
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

@@ -34,7 +34,7 @@
 
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="icon" href="img/rocket_logo2.jpg">
+		<link rel="icon" href="img/logo.png">
 		<title>NovaRocketTeam</title>
 		<link rel="stylesheet" type="text/css" href="mystyle.css">
 	</head>	
@@ -45,73 +45,36 @@
 			<li><a href="#home">Home</a></li>
 			<li><a href="#news">News</a></li>
 			<li><a href="#rockets">Rockets</a></li>
-			<li><a href="#teams">Teams</a></li>
+			<li><a href="teams.html">Members</a></li>
 			<li><a href="#aboutus">About Us</a></li>
 			<li><a href="#sponsors">Sponsors</a></li>
-			<li><a href="#contact">Contact</a></li>
+			<li><a href="contact.html">Contact</a></li>
 		</ul>
 
 	    <header id="home">
-	        	<img src="img/rocket_logo2.jpg">
+	        	<img src="img/logo.svg">
 	        	<h1>Nova Rocket Team</h1>
+	        	<h2>Discovering the Unknown</h2>
 	    </header>
 
 		<div class="content">
         	<div class="news padding64 center" id="news">
         		<h1>News</h1>
         	</div>
-        	<div class="Rockets black padding64 center" id="rockets">
+        	<div class="black padding64 center" id="rockets">
         		<h1>Rockets</h1>
         	</div>
-        	<div class="Teams padding64 center" id="teams">
-        		<h1>Teams</h1>
-        		<p>Control Team</p>
-        		<p>Electronics</p>
-        		<p>Rocket and recovery system</p>
-        		<p>Rocket propulsion</p>
-        	</div>
-        	<div class="AboutUs black padding64 center" id="aboutus">
+        	
+        	<div class="padding64 center" id="aboutus">
 	        	<h1>About Us</h1>
 	        	<p>
 	        		This project was born in Faculdade de Ciências e Tecnologia of NOVA University of Lisbon last year with the will to learn new concepts, explore the unknown and test our limits. The project's team dedicates not just to learning how to design, assemble, and launch rockets, but also to improve its efficiency from paper electronics for weight reduction to rocket motor designs.
 				</p>
 				<p>
-					Even tought model rocketry is a very popular hobby in other countries in Portugal there is a very small culture. So we also aim to educate and inspire the next generation of engeneers.
-
-	        </div>
-	        <div class="Sponsors padding64 center" id="sponsors">
-        		<h1>Sponsors</h1>
-        	</div>
-        	<div class="black padding64 center" id="contact">
-	        	<h1>Contact</h1>
-	        	<p>Palha</p>
-	    	</div>
-
-
-			<div id="map" style="width:100%;height:300px;filter: grayscale(100%)"></div>
-
-		    <script>
-		    	function initMap() {
-			        var myLatLng = {lat: 38.661184, lng: -9.203917};
-
-			        var map = new google.maps.Map(document.getElementById('map'), {
-			          zoom: 16,
-			          center: myLatLng,
-			          gestureHandling: 'cooperative'
-			        });
-
-			        var marker = new google.maps.Marker({
-			          position: myLatLng,
-			          map: map,
-			          title: 'map'
-			        });
-			      }
-		    </script>
-
-		    <script async defer
-		    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVkUEfPiM1Wr_fQdiz1m92GbklzmpcMBM&callback=initMap">
-		    </script> 
-
+					Even tought model rocketry is a very popular hobby in other countries in Portugal there is a very small culture. So we also aim to educate and inspire the next generation of engineers.
+			</p>
+			</div>		
+ 
 			
 			<footer>
 				<div class="black padding64">

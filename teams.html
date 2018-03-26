@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+	<script 
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+	</script>
+	<script>
+		$(document).ready(function(){
+		  // Add smooth scrolling to all links
+		  $("a").on('click', function(event) {
+
+		    // Make sure this.hash has a value before overriding default behavior
+		    if (this.hash !== "") {
+		      // Prevent default anchor click behavior
+		      event.preventDefault();
+
+		      // Store hash
+		      var hash = this.hash;
+
+		      // Using jQuery's animate() method to add smooth page scroll
+		      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+		      $('html, body').animate({
+		        scrollTop: $(hash).offset().top
+		      }, 800, function(){
+		   
+		        // Add hash (#) to URL when done scrolling (default click behavior)
+		        window.location.hash = hash;
+		      });
+		    } 
+		  });
+		});
+	</script>
+
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="img/logo.png">
+		<title>NovaRocketTeam</title>
+		<link rel="stylesheet" type="text/css" href="mystyle.css">
+	</head>	
+
+	<body>
+
+		<ul class="topnav" style="z-index: 5">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="index.html#news">News</a></li>
+			<li><a href="index.html#rockets">Rockets</a></li>
+			<li><a href="teams.html">Members</a></li>
+			<li><a href="index.html#aboutus">About Us</a></li>
+			<li><a href="sponsors.html">Sponsors</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+
+	    <header id="home">
+	        	<img src="img/logo.svg">
+	        	<h1>Nova Rocket Team</h1>
+	        	<h2>Discovering the Unknown</h2>
+	    </header>
+
+  		<div class="Teams padding12 center" id="teams">
+    		<h1>Members</h1>
+    	</div>
+
+		<div class="main" style="display: block; margin-left: 3%; margin-right: auto; width:100%">
+
+			<div class="company-box">
+				<img src="img/fotojr.png" style="display: block; margin-left: auto; margin-right: auto; width:200px;">
+				<div style="text-align: center; font-weight: 500">
+    				<p>Control</p>
+    			</div>
+    			<div style="text-align: center;">
+    				<p>Rocket design and simulation</p>
+    			</div>
+			</div>
+			<div class="company-box">
+				<img src="img/fotojr.png" style="display: block; margin-left: auto; margin-right: auto; width:200px">
+				<div style="text-align: center; font-weight: 500">
+    				<p>Electronics</p>
+    			</div>
+    			<div style="text-align: center;">
+    				<p>Rocket design and stabilization system</p>
+    			</div>
+			</div>
+			<div class="company-box">
+				<img src="img/fotojr.png" style="display: block; margin-left: auto; margin-right: auto; width:200px">
+				<div style="text-align: center; font-weight: 500">
+    				<p>Recovery system</p>
+    			</div>
+    			<div style="text-align: center;">
+    				<p>Design parachute and deployement system</p>
+    			</div>
+			</div>
+			<div class="company-box">
+				<img src="img/fotojr.png" style="display: block; margin-left: auto; margin-right: auto; width:200px">
+				<div style="text-align: center; font-weight: 500">
+    				<p>Propulsion</p>
+    			</div>
+    			<div style="text-align: center;">
+    				<p>Rocket motor design and fabrication</p>
+    			</div>
+			</div>
+		</div>
+    	
+		<footer>
+			<div class="black padding64">
+			</div>
+		</footer>
+
+
+
+			</body>
+</html>
