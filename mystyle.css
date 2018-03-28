@@ -218,12 +218,13 @@ img.newsImage {
   position: relative;
 }
 
-h1 {
+.rocket h1 {
   text-align: center;
   height: 38px;
   margin: 60px 0;
+  padding-bottom: 30px;
 }
-h1 span {
+.rocket h1 span {
   white-space: nowrap;
 }
 
@@ -318,7 +319,7 @@ h1 span {
 }
 .input span::before {
   content: attr(data-info);
-  top: -75px;
+  top: -85px;
   width: 100px;
   transform: translateX(-10px) rotateZ(-45deg);
   font-size: 15px;
