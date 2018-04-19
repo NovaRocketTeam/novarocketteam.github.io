@@ -144,7 +144,7 @@ input[type=text], select, textarea {
     margin-bottom: 16px;
     resize: vertical;
 }
-#email, select, textarea {
+#email {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc
